@@ -1,33 +1,41 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      {/* navbar */}
+      <div className=' px-4 border border-red-400 flex justify-between'>
+        <div>name</div>
+        <div className='flex justify-between w-1/6'>
+          <div>home</div>
+          <div>projects</div>
+          <div>about</div>
+        </div>
+        <div>
+          icons
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+      {/* main content */}
+      <div className='border border-purple-400 h-screen flex'>
+
+        <div className='w-1/2 h-1/2 flex flex-col justify-center pl-6'>
+          <h1 className='font-bold text-6xl my-2 '>Web Developer</h1>
+          <p className='text-xl w-3/5'>
+            bunch of text about how i'm a good developer
+            bunch of text about how i'm a good developer
+          </p>
+        </div>
+
+        <div className='w-1/2 h-1/2'>
+          photo of me
+        </div>
+
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      {/* footer */}
+      <div className='border border-blue-400'>
+        footer
+      </div>
     </>
   )
 }
